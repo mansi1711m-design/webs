@@ -1,0 +1,143 @@
+<html>
+<head>
+<style>
+header{
+	background-color:blue;
+	font-family:san-serif;
+	color:white;
+	padding:16px,20px;
+	margin:0px;
+	text-align:right;
+	font-size:50px;
+}
+h1{
+	background-color:#FCF0BB;
+	font-family:san-serif;
+	font-size:35px;
+	text-align:right;
+}
+body{
+	font-family:san-serif;
+	font-size:30px;
+}
+a{
+	color:yellow;
+	text-size:30px;
+	font-weight:bold;
+	gap:10px;
+}
+.custom-btn{
+	background-color:#2798F5;
+	color:white;
+	padding:10px 20px;
+	font-weight:bold;
+}	
+</style>
+
+</head>
+<header>Problem solving through C</header>
+<h1 style="text-align:center;">Recursion</h1><br>
+
+<body>
+<h1>Q1
+Write a program of recursion and display the output.<br>
+Answer:</h1>
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+#include&ltdos.h&gt<br>
+int i=1;<br>
+void display()<br>
+{ <br>
+if(i<=5)<br>
+{<br>
+i++;<br>
+display();<br>
+}<br>
+printf("%d\n", i);<br>
+}<br>
+void main()<br>
+{ <br>
+clrscr();<br>
+display();<br>
+}<br>
+Output<br>
+6<br>
+6<br>
+6<br>
+6<br>
+6<br>
+6<br>
+
+
+
+
+
+<h1>Q2 
+Write a program of recursion with global variable and display the output.<br>
+Answer:</h1>
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+#include&ltdos.h&gt<br>
+{<br>
+int num=1;<br>
+void display()<br>
+{<br>
+if(num<=5)<br>
+{<br>
+printf("%d\n",num);<br>
+num++;<br>
+display();<br>
+}<br>
+printf("A");<br>
+}<br>
+void main()<br>
+{<br>
+clrscr();<br>
+display(); <br> 
+}<br>
+Output:<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+AAAAAA</p>
+
+
+
+
+
+<h1>Q3 
+Write a program of recursion with local variable and display the output.<br>
+Answer:</h1>
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+#include&ltdos.h&gt<br>
+{<br>
+int num=1;<br>
+if(num<=5)<br>
+{<br>
+printf("%d\n",num);<br>
+num++;<br>
+display();<br>
+}<br>
+printf("A");<br>
+}<br>
+void main()<br>
+{<br>
+clrscr();<br>
+display();<br>
+}<br>
+Output:1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+1<br>
+...</p>
+</body>
+</html>

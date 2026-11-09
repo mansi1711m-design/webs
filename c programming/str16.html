@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<body>
+
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+
+void main()<br>
+{<br>
+   char str[100], ch;<br>
+    int i, found=0;<br>
+
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);<br>
+
+    printf("Enter a character: ");<br>
+    scanf("%c",&ch);<br>
+
+        for(i=0; str[i]!='\0'; i++)<br>
+    {<br>
+        if(str[i]==ch)<br>
+        {<br>
+            printf("Bound number = %d",i);<br>
+            found=1;<br>
+            break;<br>
+        }<br>
+    }<br>
+
+    if(found==0)<br>
+    {<br>
+        printf("Character not found");<br>
+    }<br>
+
+
+     getch();<br>
+}</p>
+<h1>Output</h1>
+<p>Enter a string: COMPUTER<br>
+Enter a character: P<br>
+
+Bound number = 2</p>
+</body>
+</html>

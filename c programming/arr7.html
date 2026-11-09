@@ -1,0 +1,42 @@
+<html>
+<head></head>
+<body>
+<p>#include &ltstdio.h&gt<br>
+
+void main()<br>
+{<br>
+    int n, i;<br>
+
+    printf("Enter the size of array: ");<br>
+    scanf("%d", &n);<br>
+
+    int arr[n];<br>
+
+    printf("Enter %d elements:\n", n);<br>
+
+    for(i = 0; i < n; i++)<br>
+    {<br>
+        scanf("%d", &arr[i]);<br>
+    }<br>
+
+        for(i = 0; i < n; i++)<br>
+    {<br>
+        arr[i] = arr[i] * arr[i];<br>
+    }<br>
+
+    printf("Array after squaring:\n");<br>
+
+    for(i = 0; i < n; i++)<br>
+    {<br>
+        printf("%d ", arr[i]);<br>
+    }<br>
+}</p>
+<h1>Output</h1>
+<p>Enter the size of array: 5<br>
+Enter 5 elements:<br>
+2 3 4 5 6<br>
+
+Array after squaring:<br>
+4 9 16 25 36</p>
+</body>
+</html>

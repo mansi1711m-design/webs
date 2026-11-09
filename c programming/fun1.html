@@ -1,0 +1,479 @@
+<html>
+<head><style>
+p{	color:green;
+	font-family:san-serif;
+	font-size:30px;
+}
+</style>
+</head>
+<body>
+</head>
+<body>
+
+
+<p>#include &ltstdio.h&gt</p>
+
+<p>void main()<br>
+{<br>
+    float a, b;<br>
+
+    // 1. Addition<br>
+    printf("Enter two numbers for addition: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Addition = %.2f\n\n", a + b);<br>
+
+    // 2. Subtraction<br>
+    printf("Enter two numbers for subtraction: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Subtraction = %.2f\n\n", a - b);<br>
+
+    // 3. Addition<br>
+    printf("Enter two numbers for addition: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Addition = %.2f\n\n", a + b);<br>
+
+    // 4. Multiplication<br>
+    printf("Enter two numbers for multiplication: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Multiplication = %.2f\n\n", a * b);<br>
+
+    // 5. Subtraction<br>
+    printf("Enter two numbers for subtraction: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Subtraction = %.2f\n\n", a - b);<br>
+
+    // 6. Multiplication<br>
+    printf("Enter two numbers for multiplication: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Multiplication = %.2f\n\n", a * b);<br>
+
+    // 7. Division<br>
+    printf("Enter two numbers for division: ");<br>
+    scanf("%f %f", &a, &b);<br>
+
+    if (b != 0)<br>
+        printf("Division = %.2f\n\n", a / b);<br>
+    else<br>
+        printf("Division by zero is not possible.\n\n");<br>
+
+    // 8. Division<br>
+    printf("Enter two numbers for division: ");<br>
+    scanf("%f %f", &a, &b);<br>
+
+
+    // 9. Addition<br>
+    printf("Enter two numbers for addition: ");<br>
+    scanf("%f %f", &a, &b);<br>
+    printf("Addition = %.2f\n", a + b);<br>
+
+
+}</p>
+<h1>Output</h1>
+<p>Enter two numbers for addition: 10 5<br>
+Addition = 15.00<br>
+
+Enter two numbers for subtraction: 20 8<br>
+Subtraction = 12.00<br>
+
+Enter two numbers for addition: 15 5<br>
+Addition = 20.00<br>
+
+Enter two numbers for multiplication: 4 5<br>
+Multiplication = 20.00<br>
+
+Enter two numbers for subtraction: 30 10<br>
+Subtraction = 20.00<br>
+
+Enter two numbers for multiplication: 6 7<br>
+Multiplication = 42.00<br>
+
+Enter two numbers for division: 20 4<br>
+Division = 5.00<br>
+
+Enter two numbers for division: 50 10<br>
+Division = 5.00<br>
+
+Enter two numbers for addition: 25 15<br>
+Addition = 40.00</p>
+
+2.<p id="fun2">#include &ltstdio.h&gt<br>
+
+void main()<br>
+{<br>
+    int num, sum = 0, i;<br>
+
+    for(i = 1; i <= 10; i++)<br>
+    {<br>
+        printf("Enter number %d: ", i);<br>
+        scanf("%d", &num);<br>
+
+        sum = sum + num;<br>
+    }<br>
+
+    printf("\nThe sum of 10 numbers = %d", sum);<br>
+
+}</p>
+<h1>Output</h1>
+<p>Enter number 1: 10<br>
+Enter number 2: 20<br>
+Enter number 3: 30<br>
+Enter number 4: 40<br>
+Enter number 5: 50<br>
+Enter number 6: 60<br>
+Enter number 7: 70<br>
+Enter number 8: 80<br>
+Enter number 9: 90<br>
+Enter number 10: 100<br>
+
+The sum of 10 numbers = 550</p>
+
+<p id="fun3">3.#include &ltstdio.h&gt<br>
+
+void main()<br>
+{<br>
+    
+    int *p, i;<br>
+
+    p = getArray();<br>
+
+    printf("Array elements are:\n");<br>
+
+    for(i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", p[i]);<br>
+    }<br>
+
+}</p>
+<h1>Output</h1>
+<p>Array elements are:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50</p>
+
+
+<p id="fun4">4. #include &ltstdio.h&gt<br>
+
+int fact = 1;   // Global variable<br>
+
+void main()<br>
+{<br>
+    int n, i;   // Local variables<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    for(i = 1; i <= n; i++)<br>
+    {<br>
+        fact = fact * i;<br>
+    }<br>
+
+    printf("Factorial = %d", fact);<br>
+
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 5<br>
+Factorial = 120</p>
+<br><br><br>
+<h1>2. Reverse a Number using Local and Global Variables</h1>
+<p>#include &ltstdio.h&gt<br>
+
+int rev = 0;   // Global variable<br>
+
+void main()<br>
+{<br>
+    int n, rem;   // Local variables<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    while(n != 0)<br>
+    {<br>
+        rem = n % 10;<br>
+        rev = rev * 10 + rem;<br>
+        n = n / 10;<br>
+    }<br>
+
+    printf("Reverse = %d", rev);<br>
+
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 1234<br>
+Reverse = 4321</p>
+<br><br><br>
+
+
+<h1>3. Palindrome Number using Local and Global Variables</h1>
+<p>#include &ltstdio.h&gt<br>
+
+int rev = 0;   // Global variable<br>
+
+void main()<br>
+{<br>
+    int n, temp, rem;   // Local variables<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    temp = n;<br>
+
+    while(n != 0)<br>
+    {
+        rem = n % 10;<br>
+        rev = rev * 10 + rem;<br>
+        n = n / 10;<br>
+    }<br>
+
+    if(temp == rev)<br>
+        printf("Palindrome Number");<br>
+    else<br>
+        printf("Not a Palindrome Number");<br>
+
+ 
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 121<br>
+Palindrome Number</p>
+<br><br><br>
+<h1>4. Prime Number using Local and Global Variables</h1>
+<p>
+<p>#include &ltstdio.h&gt<br>
+
+int count = 0;   // Global variable<br>
+
+void main()<br>
+{<br>
+    int n, i;   // Local variables<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    for(i = 1; i <= n; i++)<br>
+    {<br>
+        if(n % i == 0)<br>
+        {<br>
+            count++;<br>
+        }<br>
+    }<br>
+
+    if(count == 2)<br>
+        printf("Prime Number");<br>
+    else<br>
+        printf("Not a Prime Number");<br>
+
+
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 7<br>
+Prime Number</p>
+<br><br><br>
+5. Armstrong Number using Local and Global Variables
+<p>#include &ltstdio.h&gt<br>
+
+int sum = 0;   // Global variable<br>
+
+void main()<br>
+{<br>
+    int n, temp, rem;   // Local variables<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    temp = n;<br>
+
+    while(n != 0)<br>
+    {<br>
+        rem = n % 10;<br>
+        sum = sum + (rem * rem * rem);<br>
+        n = n / 10;<br>
+    }<br>
+
+    if(temp == sum)<br>
+        printf("Armstrong Number");<br>
+    else<br>
+        printf("Not an Armstrong Number");<br>
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 153<br>
+Armstrong Number</p>
+<br><br><br>
+<h1>6. Fibonacci Series using Local and Global Variables</h1>
+<p>#include &ltstdio.h&gt<br>
+
+int a = 0, b = 1;   // Global variables<br>
+
+void main()<br>
+{<br>
+
+    int n, i, c;   // Local variables<br>
+
+    printf("Enter number of terms: ");<br>
+    scanf("%d", &n);<br>
+
+    printf("Fibonacci Series: ");<br>
+
+    for(i = 1; i <= n; i++)<br>
+    {<br>
+        printf("%d ", a);<br>
+
+        c = a + b;<br>
+        a = b;<br>
+        b = c;<br>
+    }<br>
+
+
+}</p>
+<h1>Output</h1>
+<p>Enter number of terms: 7<br>
+Fibonacci Series: 0 1 1 2 3 5 8</p>
+
+<p id="fun5">5.#include &ltstdio.h&gt<br>
+
+void swap(int *a, int *b)<br>
+{<br>
+    int temp;<br>
+
+    temp = *a;<br>
+    *a = *b;<br>
+    *b = temp;<br>
+}<br>
+void main()<br>
+{<br>
+    int x, y;<br>
+
+    printf("Enter two numbers: ");<br>
+    scanf("%d %d", &x, &y);<br>
+
+    printf("\nBefore swapping:");<br>
+    printf("\nX = %d", x);<br>
+    printf("\nY = %d", y);<br>
+
+    swap(&x, &y);<br>
+
+    printf("\n\nAfter swapping:");<br>
+    printf("\nX = %d", x);<br>
+    printf("\nY = %d", y);<br>
+
+  
+}</p>
+<h1>Output</h1>
+<p>Enter two numbers: 10 20<br>
+
+Before swapping:<br>
+X = 10<br>
+Y = 20<br>
+
+After swapping:<br>
+X = 20<br>
+Y = 10</p>
+
+<p id="fun6">6.#include &ltstdio.h&gt<br>
+
+void swap(int a, int b)<br>
+{<br>
+    int temp;<br>
+
+    temp = a;<br>
+    a = b;<br>
+    b = temp;<br>
+
+    printf("\nInside swap function:");<br>
+    printf("\nA = %d", a);<br>
+    printf("\nB = %d", b);<br>
+}<br>
+
+void main()<br>
+{<br>
+    int x, y;<br>
+
+    printf("Enter two numbers: ");<br>
+    scanf("%d %d", &x, &y);<br>
+
+    printf("\nBefore swapping:");<br>
+    printf("\nX = %d", x);<br>
+    printf("\nY = %d", y);<br>
+
+    swap(x, y);<br>
+
+    printf("\n\nAfter calling function:");<br>
+    printf("\nX = %d", x);<br>
+    printf("\nY = %d", y);<br>
+
+}</p>
+<h1>Output</h1>
+<p>Enter two numbers: 10 20<br>
+
+Before swapping:<br>
+X = 10<br>
+Y = 20<br>
+
+Inside swap function:<br>
+A = 20<br>
+B = 10<br>
+
+After calling function:<br>
+X = 10<br>
+Y = 20</p>
+
+<p id="fun7">7.#include &ltstdio.h&gt<br>
+
+}<br>
+    int i, result = 1;<br>
+
+    for(i = 1; i <= p; i++)<br>
+    {<br>
+        result = result * n;<br>
+    }<br>
+
+    return result;<br>
+}<br>
+
+void main()<br>
+{<br>
+    int num, p, ans;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &num);<br>
+
+    printf("Enter power: ");<br>
+    scanf("%d", &p);<br>
+
+    ans = power(num, p);<br>
+
+    printf("Answer = %d", ans);<br>
+
+  }</p>
+
+<h1>Output</h1>
+<p>Enter a number: 2<br>
+Enter power: 3<br>
+Answer = 8</p>
+
+<p id="fun8">8.#include &ltstdio.h&gt<br>
+
+int cube(int n)<br>
+{<br>
+    return n * n * n;<br>
+}<br>
+
+void main()<br>
+{<br>
+    int num, ans;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &num);<br>
+
+    ans = cube(num);<br>
+
+    printf("Cube = %d", ans);<br>
+
+}</p>
+<h1>Output</h1>
+<p>Enter a number: 5<br>
+Cube = 125</p>
+
+
+
+</body>
+</html>

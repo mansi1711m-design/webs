@@ -1,0 +1,111 @@
+<html>
+<head><style>
+header{
+	background-color:blue;
+	font-family:san-serif;
+	color:white;
+	padding:16px,20px;
+	margin:0px;
+	text-align:right;
+	font-size:50px;
+}
+h1{
+	background-color:#FCF0BB;
+	font-family:san-serif;
+	font-size:35px;
+	text-align:right;
+}
+body{
+	font-family:san-serif;
+	font-size:30px;
+}
+a{
+	color:yellow;
+	text-size:30px;
+	font-weight:bold;
+	gap:10px;
+}
+.custom-btn{
+	background-color:#2798F5;
+	color:white;
+	padding:10px 20px;
+	font-weight:bold;
+}
+h2{ font-size:35px;
+}	
+</style>
+
+</head>
+<header>Problem solving through C</header>
+<h1 style="text-align:center;">Recursion</h1><br>
+
+<body>
+<h2>Q1.
+A pointer should point the array & through pointer we will fill all the locations of the array by asking the value from the user & print the array<br>
+Answer:</h2>
+<p>#include &ltstdio.h&gt<br>
+#include &ltconio.h&gt<br>
+void main()<br>
+{<br>
+int arr[2][3],i,j,*ptr;<br>
+ptr=arr;<br>
+clrscr();<br>
+printf("enter array elemenets");<br>
+for(i=0;i<6;i++)<br>
+{<br>
+scanf("%d",ptr+i);<br>
+}<br>
+for(i=0;i<2;i++)<br>
+{<br>
+for(j=0;j<3;j++)<br>
+{<br>
+printf("%d  ",arr[i][j]);<br>
+}<br>
+printf("\n");<br>
+}<br>
+}<br></p>
+<h2>Output</h2>
+<p>enter array elements23<br>
+45<br>
+65<br>
+76<br>
+65<br>
+54<br>
+23  45  65<br>
+76  65  54</p>
+
+
+
+
+<h2>Q2.
+A pointer should print the array through the pointer we will fill all the locations of the array by basking the value from the user & print the array?<br>
+Answer:</h2>
+<p>#include &ltstdio.h&gt<br>
+#include &ltconio.h&gt<br>
+void main()<br>
+{<br>
+int arr[8],i,*ptr;<br>
+ptr=arr;<br>
+clrscr();<br>
+printf("enter array elemenets");<br>
+for(i=0;i<8;i++)<br>
+{<br>
+scanf("%d",ptr+i);<br>
+}<br>
+for(i=0;i<8;i++)<br>
+{<br>
+printf("%d  ",arr[i]);<br>
+}<br>
+}<br>
+<h2>Output</h2>
+<p>enter array elements 67<br>
+45<br>
+98<br>
+65<br>
+73<br>
+44<br>
+56<br>
+67<br>
+67  45  98  65  73  44  56  67</p>
+</body>
+</html>

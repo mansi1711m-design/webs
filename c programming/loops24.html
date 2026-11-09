@@ -1,0 +1,52 @@
+<html>
+<head></head>
+<body>
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+
+void main()<br>
+{<br>
+     int n,temp,rem,sum=0;<br>
+
+    clrscr();<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d",&n);<br>
+
+    temp=n;<br>
+
+   while(temp>0)<br>
+    {<br>
+        count++;<br>
+        temp=temp/10;<br>
+    }<br>
+
+    temp=n;<br>
+
+    while(temp>0)<br>
+    {<br>
+        rem=temp%10;<br>
+        power=1;<br>
+
+        for(i=1;i<=count;i++)<br>
+        {<br>
+            power=power*rem;<br>
+        }<br>
+
+        sum=sum+power;<br>
+        temp=temp/10;<br>
+    }<br>
+
+    if(n==sum)<br>
+        printf("Armstrong Number");<br>
+    else<br>
+        printf("Not Armstrong Number");<br>
+
+    getch();<br>
+}<br>
+<h1>Output</h1>
+<p>Enter a number: 123<br>
+
+Not Armstrong Number</p>
+</body>
+</html>

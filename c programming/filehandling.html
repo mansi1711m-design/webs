@@ -1,0 +1,364 @@
+<html>
+<head><style>
+header{
+	background-color:blue;
+	font-family:san-serif;
+	color:white;
+	padding:16px,20px;
+	margin:0px;
+	text-align:right;
+	font-size:50px;
+}
+h1{
+	background-color:#FCF0BB;
+	font-family:san-serif;
+	font-size:35px;
+	text-align:right;
+}
+body{
+	font-family:san-serif;
+	font-size:30px;
+}
+a{
+	color:yellow;
+	text-size:30px;
+	font-weight:bold;
+	gap:10px;
+}
+.custom-btn{
+	background-color:#2798F5;
+	color:white;
+	padding:10px 20px;
+	font-weight:bold;
+}
+h2{ font-size:35px;
+}	
+</style>
+
+</head>
+<header>Problem solving through C</header>
+<h1 style="text-align:center;">File Handling</h1><br>
+</head>
+<body>
+<h2>Q1.
+Enter a file name from user and the data from user and put it in file.<br>
+Answer:</h2>
+<p>#include &ltstdio.h&gt<br>
+int main()<br>
+{<br>
+FILE *f;<br>
+char filename[50];<br>
+char data[200];<br>
+printf("Enter file name: ");<br>
+scanf("%s", filename);<br>
+f = fopen(filename, "w");<br>
+if (f == NULL)<br>
+{<br>
+printf("File cannot be created!");<br>
+return 1;<br>
+}<br>
+printf("Enter data: ");<br>
+getchar();<br>
+fgets(data, sizeof(data), stdin);<br>
+fprintf(fp, "%s", data);<br>
+fclose(fp);<br>
+printf("Data successfully written to file.");<br>
+return 0;<br>
+}<br>
+<h2>Output</h2>
+
+<p>Enter file name: student.txt<br>
+Enter data: Hello, Welcome to C Programming.<br>
+Data successfully written to file.</p>
+</body>
+</html>
+
+
+
+
+
+
+<h2>Q2.
+Enter a file name from user and the data from user and put it in file.but the data should be in capital.<br>
+Answer:</h2>
+<p>#include &ltstdio.h&gt<br>
+int main()<br>
+{<br>
+FILE *fp;<br>
+char filename[50];<br>
+char data[200];<br>
+int i;<br>
+printf("Enter file name: ");<br>
+scanf("%s", filename);<br>
+fp = fopen(filename, "w");<br>
+if (fp == NULL)<br>
+{<br>
+printf("File cannot be created!");<br>
+return 1;<br>
+}<br>
+printf("Enter data: ");<br>
+getchar();<br>
+fgets(data, sizeof(data), stdin);<br>
+for (i = 0; data[i] != '\0'; i++)<br>
+{<br>
+data[i] = toupper(data[i]);<br>
+}<br>
+fprintf(fp, "%s", data);<br>
+fclose(fp);<br>
+printf("Data successfully stored in capital letters.");<br>
+return 0;<br>
+}</p>
+<h2>Output</h2>
+<p>Enter file name: student.txt<br>
+Enter data: hello welcome to c programming</p>
+
+
+
+
+
+
+<h2>Q3.
+Enter a file name from user and the data from user and put it in file till the user wants to enter.<br>
+Answer:</h2>
+<p>#include &ltstdio.h&gt<br>
+void main()<br>
+{FILE *fp;<br>
+char fname[30], data[100];<br>
+char ch;<br>
+clrscr();<br>
+printf("Enter file name: ");<br>
+scanf("%s",fname);<br>
+fp=fopen(fname,"w");<br>
+do<br>
+    {printf("Enter data: ");<br>
+     fflush(stdin);<br>
+     gets(data);<br>
+     fprintf(fp,"%s\n",data);<br>
+     printf("Do you want to enter more data (Y/N): ");<br>
+     scanf(" %c",&ch);<br>
+     }while(ch=='Y' || ch=='y');<br>
+  fclose(fp);<br>
+ printf("Data successfully written in file");<br>
+}</p>
+<h2>Output</h2>
+
+<p>Enter file name: student<br>
+Enter data: I am a BCA student<br>
+Do you want to enter more data (Y/N): Y<br>
+Enter data: I am learning C programming<br>
+Do you want to enter more data (Y/N): Y<br>
+Enter data: File handling is easy<br>
+Do you want to enter more data (Y/N): N<br>
+Data successfully written in file<br>
+
+Content inside student<br>
+I am a BCA student<br>
+I am learning C programming<br>
+File handling is easy</p>
+
+
+
+
+
+
+<h2>Q4
+Enter a file name from user and copy that file in another file.<br>
+Answer:</h2>
+<p>#include&ltstdio.h&gt<br>
+void main()<br>
+{FILE *fp1,*fp2;char fname1[30],fname2[30],data[100];<br>
+char ch;<br>
+clrscr();<br>
+printf("Enter first file name: ");<br>
+scanf("%s",fname1);<br>
+fp1=fopen(fname1,"w");<br>
+printf("Enter data: ");<br>
+fflush(stdin);<br>
+gets(data);<br>
+fprintf(fp1,"%s",data);<br>
+fclose(fp1);<br>
+printf("Enter second file name: ");<br>
+scanf("%s",fname2);<br>
+fp1=fopen(fname1,"r");<br>
+ fp2=fopen(fname2,"w");<br>
+while((ch=fgetc(fp1))!=EOF)<br>
+    {fputc(ch,fp2);<br>
+    }<br>
+fclose(fp1);<br>
+fclose(fp2);<br>
+printf("File copied successfully");<br>
+}<p>
+<h2>Output</h2>
+<p>Enter first file name: first<br>
+Enter data: I am learning C programming<br>
+Enter second file name: second<br>
+File copied successfully<br><br>
+
+
+
+Content of first<br>
+I am learning C programming<br>
+Content of second<br>
+I am learning C programming</p>
+
+
+
+
+
+
+<h2>Q5.
+Enter a file name from user and the data from user and rename that file. But rename should be by user.<br>
+Answer:</h2>
+<p>#include&ltstdio.h&gt<br>
+#include&ltconio.h&gt<br>
+#include&ltdos.h&gt<br>
+void main()<br>
+{FILE *fp;<br>
+char fname1[30],fname2[30],data[100];<br>
+clrscr();<br>
+printf("Enter file name: ");<br>
+scanf("%s",fname1);<br>
+fp=fopen(fname1,"w");<br>
+printf("Enter data: ");<br>
+fflush(stdin);<br>
+gets(data);<br>
+fprintf(fp,"%s",data);<br>
+fclose(fp);<br>
+printf("Enter new file name: ");<br>
+scanf("%s",fname2);<br>
+rename(fname1,fname2);<br>
+printf("File renamed successfully");<br>
+}</p>
+<h2>OUTPUT</h3>
+
+
+<p>Enter file name:first<br>
+Enter data:I am learning C programming<br>
+Enter new file name: second<br>
+File renamed successfully</p>
+
+
+
+
+
+
+<h2>Q6.
+Enter two files from user and concatenate into 3rd file.<br>
+Answer:</h2>
+<p>void main()<br>
+{FILE *fp1,*fp2,*fp3;<br>
+char fname1[30],fname2[30],fname3[30];<br>
+char ch;<br>
+clrscr();<br>
+printf("Enter first file name: ");<br>
+scanf("%s",fname1);<br>
+printf("Enter second file name: ");<br>
+scanf("%s",fname2);<br>
+printf("Enter third file name: ");<br>
+scanf("%s",fname3);<br>
+fp1=fopen(fname1,"r");<br>
+fp2=fopen(fname2,"r");<br>
+fp3=fopen(fname3,"w");<br>
+while((ch=fgetc(fp1))!=EOF)<br>
+    {fputc(ch,fp3);<br>
+    }<br>
+while((ch=fgetc(fp2))!=EOF)<br>
+    {fputc(ch,fp3);<br>
+    }<br>
+fclose(fp1);<br>
+fclose(fp2);<br>
+fclose(fp3);<br>
+printf("Files concatenated successfully");<br>
+}</p>
+
+
+
+<h2>Output</h2>
+
+<p>Enter first file name: first<br>
+Enter second file name: second<br>
+Enter third file name: third<br>
+Files concatenated successfully</p>
+
+
+
+
+
+
+<h2>Q7.
+Create a file count no. of characters in a file.<br>
+Answer:</h2>
+<p>void main()<br>
+{FILE *fp;<br>
+char fname[30];<br>
+char ch;<br>
+int count=0;<br>
+clrscr();<br>
+printf("Enter file name: ");<br>
+scanf("%s",fname);<br>
+fp=fopen(fname,"w");<br>
+printf("Enter data: ");<br>
+fflush(stdin);<br>
+while((ch=getchar())!='\n')<br>
+    {fputc(ch,fp);<br>
+    }<br>
+fclose(fp);<br>
+ 
+fp=fopen(fname,"r");<br>
+while((ch=fgetc(fp))!=EOF)<br>
+    { count++;<br>
+    }<br>
+
+ fclose(fp);<br>
+printf("\nTotal characters = %d",count);<br>
+}</p>
+<h2>Output</h2>
+
+<p>Enter file name: student.txt<br>
+Enter data: Hello World<br>
+Total characters = 11</p>
+
+
+
+
+
+
+<h2>Q8
+Create a file and count no. of words in a file.<br>
+Answer:</h2>
+<p>void main()<br>
+{FILE *fp;<br>
+char fname[30], ch;<br>
+int count=0, flag=0;<br>
+clrscr();<br>
+printf("Enter file name: ");<br>
+scanf("%s",fname);<br>
+fp=fopen(fname,"w");<br>
+printf("Enter data: ");<br>
+fflush(stdin);<br>
+ while((ch=getchar())!='\n')<br>
+    {<br>
+        fputc(ch,fp);<br>
+    }<br>
+fclose(fp);<br>
+fp=fopen(fname,"r");<br>
+while((ch=fgetc(fp))!=EOF)<br>
+    {if(ch!=' ' && ch!='\n' && ch!='\t')<br>
+       {if(flag==0)<br>
+            { count++;<br>
+              flag=1;<br>
+            }<br>
+        }<br>
+  else<br>
+        {<br>
+            flag=0;<br>
+        }<br>
+    }<br>
+fclose(fp);<br>
+printf("\nTotal words = %d",count);<br>
+}</p>
+<h2>Output</h2>
+
+<p>Enter file name: student<br>
+Enter data: I am learning C programming<br>
+Total words = 5</p>
